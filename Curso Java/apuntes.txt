@@ -1,0 +1,341 @@
+int Almacena 4 bytes (32 bits)
+2^(32 - 1) = 2,147,483,647 // -2,147,483,648 
+
+float Almacena: 4 bytes (32 bits)
+2^(32 - 1) = 2,147,483,647 // -2,147,483,648 
+
+double Almacena: 8 bytes (64 bits)
+2^(64 - 1) = 9.223372e+18 // -9.223372e+18
+
+char Almacena: 1 byte (8 bits)
+2^(8 -1) = 127 // -128
+
+boolean Almacena: 1 byte (aunque podría ser 1 bit, se reserva un byte completo en memoria)
+2^(1-1) = 1 // -1
+
+
+
+// Desarollo la solcion para el siguiente problema, Dan tiene un empresa que contrata personas de limpieza 
+y si la persona es mujer entonces le de un bono del 5% al sueldo, 
+sin embargo si es hombre el sueldo no recibe bono, 
+Dan se dio cuenta que las mejeres llevan 1 mes mas trabajado que los hombres 
+cuanto debe pagar Dan a una trabajadora Alice que lleva 2 meses trabjando y a un trabajador  Jorge que tambien esta trabajando, 
+considerando que el pago por hora es de $30
+
+DESCOMPONER EL PROBLEMA EN 3 PARTES
+//DATOS CONOCIDOS 
+precioPorHoraTrabajada
+mesesTrabajados
+porcentaje = 0.05
+
+//PROCESO
+bono = (precioPorHoraTrabajada * mesesTrabajados)(porcentaje)
+sueldo = precioPorHoraTrabajada * mesesTrabajados
+sueldoConBono = sueldo + bono
+
+//SALIDA O RESULTADO
+sueldo
+
+
+//RECETA
+Inicio
+1. Pedir el precio por hora del trabajador y anotarlo en precioPorHoraTrabajada
+2. Pedir la cantidad de meses trabajadas por el trabajador y anotar el dato en mesesTrabajados
+3. multiplicar precioPorHoraTrabajada * mesesTrabajados y guardar el resultdo en sueldo
+4. Preguntar al trabajador si es hombre o mujer 
+5. Si es hombre imprime el sueldo
+6. Si es mujer  de multiplicar (precioPorHoraTrabajada * mesesTrabajados)(bono) y asignar el resultado en bono
+7. al sueldo sumale el bono y el resultado guardalo en sueldoConBono
+8. Imprimir el resultado que es sueldoConBono
+Fin
+
+----------------------------------------------------
+Problema, dados los numeros 6,8,3 ordenarlos de menor a mayor e imprimir cual es el mayor.
+
+Datos conocidos
+num1 = 6
+num2 = 8
+num3 = 3
+numeroMayor = ""
+
+Proceso
+Si num1 < num2
+    si num1 < num3
+        si num2 < num3
+            imprime num1, num2, num3
+            numeroMayor = num3
+        si no
+            imprime num1, num3, num2
+            numeroMayor = num2
+    si no
+        imprime num3, num1, num2
+        numeroMayor = num2
+
+si no
+    si num1 < num3
+        si num2 < num3
+            imprime num2, num1, num3
+            numeroMayor = num3
+        si no
+           imprime num3, num2, num1
+           numeroMayor = num1
+    si no
+           imprime num2, num3, num1
+           numeroMayor = num1
+
+Salida
+numeros ordenados
+numeroMayor
+
+ALGORITMO
+Inicio
+1. pedir el numero 1 y asignarlo a num1
+2. pedir el numero 2 y asignarlo a num2
+3. pedir el numero 3 y asignarlo a num3
+4. Si num1 es menor a num2, comparar si el num1 es menor al num3, comparar si num2 es menor que num3
+entonces imprimir el orden num1, num2, num3 y asignar num3 a numeroMayor e imprimirlo
+        si no es menor num2 que num3, entonces imprimir el orden num1, num3, num2 y asignar num2 a numeroMayor e imprimirlo
+    si no es menor num1 que num3, entonces imprimir el orden num3, num1, num2 y asignar num2 a numeroMayor e imprimirlo
+5. si no, comparar si el num1 es menor al num3, comparar si num2 es menor a num3
+entonces imprimir el orden num2, num1, num3 y asignar num3 a numeroMayor e imprimirlo
+        si no es menor num2 que num3, entonces imprimir el orden num3, num2, num1 y asignar num a numeroMayor e imprimirlo
+    si no es menor num1 que num3, entonces imprimir el orden num2, num3, num1 y asignar num a numeroMayor e imprimirlo
+Fin
+
+Archivo: numeroMayor.java
+
+-----------------------------------------------------------------------------------------------------
+Escribe un programa que dada la edad = 19 años de una persona y clasifíquela en las siguientes categorías,
+ yo voy a cambiar el valor de la edad para que se ejecute cada condición y ver si es verdadero o falso.
+ 
+Menor de 12 años: "Niño"
+De 12 a 17 años: "Adolescente"
+De 18 a 64 años: "Adulto"
+65 años o más: "Adulto mayor" Usa condiciones anidadas para resolverlo.
+
+DATOS CONOCIDOS 
+edad
+
+PROCESO 
+si edad < 12 imprime "Niño"
+    si no, si edad >= 12 && edad <= 17 imprime "Adolescente"
+        si no, si edad >= 18 && edad <= 64 imprime "Adulto"
+            si no, si edad >= 65 imprime "Adulto mayor"
+
+SALIDA
+imprimir la categoria segun la edad
+
+ALGORITMO
+Inicio
+1. pedir la edad y asignar a edad 19
+2. si edad es menor a 12 entonces se imprime "Niño"
+3. si no,   si la edad es mayor o igual a 12 y tambien es menor o igual a 17 entonces imprime "Adolescente"
+4. si no, si la edad es mayor o igual a 18 y tambien es menor o igual a 64 entonces imprime "Adulto"
+5. si no, entonces imprime "Adulto mayor"
+Fin
+
+
+
+Desarrollle un programa que calcule area de figuras geometrias, 
+pregunatar que tipo de figura le quiere calcularle el area
+
+hacer algoritmo y diagrama
+
+si es triangulo: base, altura
+si no
+si es cuadrado: largo y ancho 
+si no
+si es rectangulo: largo y ancho 
+si no
+si es trapecio: base mayor, base menor y altura 
+
+DATOS CONOCIDOS
+frigura triangulo
+frigura cuadrado
+frigura rectangulo
+frigura trapecio
+base
+altura
+largo
+ancho
+bMayor
+bMenor
+area
+
+PROCESO
+si queremos el area de un triangulo
+    pedir la base
+    pedir la altura
+    area = (base * altura) / 2
+si no, 
+    si queremos el area de un cuadrado o un rectangulo
+    pedir largo
+    pedir ancho
+    area = base * altura
+    si no,
+        si queremos el area de un trapecio
+        pedir bMenor
+        pedir bMayor
+        pedir altura
+        area = ((bMayor + bMenor) * altura) / 2
+
+SALIDA
+area
+
+ALGORITMO
+Inicio
+1. Pedir el numero de la figura quiere sacar el area, dar opciones 1.Triangulo, 2.Cuadrado, 3.Rectangulo, 4.Trapecio
+2. si la respuesta es 1, entonces pedir el valor de la base y altura y asignarlo a base y altura respectivamente
+    calcular el area multiplicando la base por la altura y dividirlo entre 2, imprimir el area
+3. si no, si la respuesta es 2 o 3, entonces pedir el valor del largo y ancho y asignarlo a largo y ancho respectivamente
+    calcular el area multiplicando la base por la altura, imprimir el area
+4. si no, si la respuesta es 4, entonces pedir el valor de la base menor, base mayor y altura y 
+    asignarlo a bMenor, bMayor y altura respectivamente
+    calcular el area sumando bMenor + bMayor, al resultado multiplicarlo por altura y al resultado dividirlo entre 2, 
+    imprimir el area
+Fin
+
+
+---------------------------
+
+un profesor requiere que le hagan un programa para capturar la 
+calificaion de sus alumnos (que son 10) y el programa le debe decir cuantas calificaiones registró
+y cual es el promedio de todas, "calificaiones insertadas (10) promedio: 5.8....
+si la el promedio es >7 entonces imprimir que el grupo ah acreditado el curso.
+
+
+ALGORITMO 
+Inicio
+1. declarar variable expresion con el valor verdadero
+2. declarar variable suma e inicializar en 0
+3. declaramos una variable promedio e inicializamos en 0
+4. declarar variable contador e inicializar en 0
+5. Mientras que la expresion es verdadera 
+    Solicitar calificacion y asignarla a la variable calificacion
+    a la variable suma, sumarle el valor que tiene más la calificacion ingresada
+    al contador se le suma 1
+
+    si el contador es igual a 10, cambiamos el valor de la expresion a falso
+        calculamos el valor de la variable promedio dividiendo suma entre contador
+        
+        si el promedio es mayor a 7, entonces imprimimos el contador e imprimimos el promedio
+Fin
+
+
+-----------------------------------------------------------------------------------------------------
+Dado un numero secreto hacer un programa que permita al usuario adivinar que numero es el secreto 
+mientras el usuario no adivine el numero secreto entonces continuar pidiendo que adivine.
+
+
+ALGORITMO
+Inicio
+1. declarar una variable numeroSecreo y asignarle 8 que será el numero secreto
+2. declarar variable expresion con el valor verdadero
+3. Mientras que la expresion es verdadera
+    Pedirle al usuario que adivine el numero secreto ingresandolo por el teclado y asignarlo a la variable numeroPropuesto
+
+4.  si numeroPropuesto es igual numeroSecreo, entonces cambiamos el valor de la expresion a falso
+        imprimimos el mensaje "felicidades has adividano el numero secreto"
+Fin
+
+----------------------------------------------------------------------------------------------------------------------
+Crear tablas de multiplicar 1-4 hasta el 15 
+
+ALGORITMO
+
+Inicio
+1. declarar variable expresion con el valor verdadero
+2. declarar un contador y asignarle el valor 0
+3. mientras que la expresion es verdadera
+    contador sumale 1
+    imprimir "1 x contador = " + 1*contador
+4.  si el contador es igual a 15, entonces cambiamos el valor de la expresion a falso
+5. contador asiganrle valor 0
+6. expresion asignarle valor verdadero
+7. mientras que la expresion es verdadera
+    contador sumale 1
+    imprimir "2 x contador = " + 2*contador
+8.  si el contador es igual a 15, entonces cambiamos el valor de la expresion a falso
+9. contador asiganrle valor 1
+10. expresion asignarle valor verdadero
+11. contador asiganrle valor 0
+12. expresion asignarle valor verdadero
+13. mientras que la expresion es verdadera
+    contador sumale 1
+    imprimir "3 x contador = " + 3*contador
+14.  si el contador es igual a 15, entonces cambiamos el valor de la expresion a falso
+15. contador asiganrle valor 0
+16. expresion asignarle valor verdadero
+17. mientras que la expresion es verdadera
+    contador sumale 1
+    imprimir "4 x contador = " + 4*contador
+18.  si el contador es igual a 15, entonces cambiamos el valor de la expresion a falso
+Fin
+
+
+DO WHILE 
+
+Inicio
+1. declarar variable expresion con el valor verdadero
+2. declarar un contador y asignarle el valor 0
+3. Hacer
+    contador sumale 1
+    imprimir "1 x contador = " + 1*contador
+4.  si el contador es igual a 15, entonces cambiamos el valor de la expresion a falso
+    REPETIR mientras que la expresion es verdadera
+
+5. contador asiganrle valor 0
+6. expresion asignarle valor verdadero
+
+7. Hacer
+    contador sumale 1
+    imprimir "2 x contador = " + 2*contador
+8.  si el contador es igual a 15, entonces cambiamos el valor de la expresion a falso
+    REPETIR mientras que la expresion es verdadera
+
+11. contador asiganrle valor 0
+12. expresion asignarle valor verdadero
+
+13. Hacer
+    contador sumale 1
+    imprimir "3 x contador = " + 3*contador
+14. si el contador es igual a 15, entonces cambiamos el valor de la expresion a falso
+    REPETIR mientras que la expresion es verdadera
+
+15. contador asiganrle valor 0
+16. expresion asignarle valor verdadero
+
+17. Hacer
+    contador sumale 1
+    imprimir "4 x contador = " + 4*contador
+18.  si el contador es igual a 15, entonces cambiamos el valor de la expresion a falso
+    REPETIR mientras que la expresion es verdadera
+Fin
+
+
+
+--------------------------------------------------
+pedir nombre de 10 personas
+
+1.- Dan
+2.- Ceci
+3.- Lalo
+4.- Ivan
+
+
+ALGORITMO
+Inicio
+1. Declarar una variable llamada expresion e inicializarla en verdadero
+2. Declarar una variable llamada nombre e inicializarla en vacio
+3. Declarar una variable llamada nombres e inicializarla en vacio
+4. Declarar una variable llamada contador e inicializalo en 1
+5. REPETIR mientras que la expresion es verdadera
+    Pedir al usuario ingresar un nombre y guardarlo en la variable nombre
+    a la variable nombres contatenarle el valor de nombres + contador + ".- " + nombre + "\n"
+    sumar 1 a la variable contador
+
+    si el contador es igual a 11, entonces cambiamos el valor de la expresion a falso
+6. Imprimir la variable nombres
+
+
+-------------------------------------------------------------------------------------------------------------
