@@ -1,0 +1,18 @@
+{
+  "name": "mongodb-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dulce María Cabrera Teotan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.12.2",
+    "cheerio": "^1.1.2",
+    "dotenv": "^17.2.3",
+    "mongoose": "^8.19.1",
+    "node-cron": "^4.2.1"
+  }
+}

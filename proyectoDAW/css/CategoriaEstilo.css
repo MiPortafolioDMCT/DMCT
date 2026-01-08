@@ -1,0 +1,21 @@
+.imgTable{
+    width:200px;
+    height:200px;
+    }
+.imgTable:hover {
+        transform: scale(1); /*Mouse sobre la imagen la imagen*/
+        transform: rotate(50deg);
+    }
+body{/*fondo para la pagina*/
+        background-color: #d851bb;
+        padding: 150px;
+    }
+    
+table{ /**//*Fondo a la tabla*/
+    background-color: #4f62f0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: scale(.8);
+}

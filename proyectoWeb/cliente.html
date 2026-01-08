@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cliente</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link href="css/mapResponsive.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+              <span class="fs-4">Sistema Operador de Agua Potable</span>
+            </a>
+      
+            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+              <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="ubicacion.html">Ubicación</a>
+              <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="contacto.html">Contacto</a>
+              <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="contacto.html">Clientes</a>
+              <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="contacto.html">Servicios</a>
+              <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="contacto.html">Empleados</a>
+              <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="contacto.html">Pagos</a>
+            </nav>
+            <a class="btn btn-outline-primary" href="inicioSesion.html">Iniciar sesión</a>
+          </div>
+        
+          <form method="post"> <!--indica que se van a enviar los datos al servidor-->
+            <main class="form-signin w-50 m-auto">
+            
+            <p class="datoForm">Nombre</p>
+            <input type="text" class="form-control" id="nombre" name="nombre">
+          
+            <p class="datoForm">Apellido Paterno</p>
+            <input type="text" class="form-control" id="apellidoPaterno" name="apellidoPaterno">
+            
+            <p class="datoForm">Apellido Materno</p>
+            <input type="text" class="form-control" id="apellidoMaterno" name="apellidoMaterno">
+            
+            <p class="datoForm">Calle</p>
+            <input type="text" class="form-control" id="calle" name="calle">
+            
+            <p class="datoForm">Número interior</p>
+            <input type="number" class="form-control" id="noInterior" name="noInterior">
+            
+            <p class="datoForm">Número exterior</p>
+            <input type="number" class="form-control" id="noExterior" name="noExterior">
+            
+            <p class="datoForm">Colonia</p>
+            <input type="text" class="form-control" id="colonia" name="colonia">
+            
+            <p class="datoForm">Tipo cliente </p>
+            <select class="form-select" id="tipoCliente" name="tipoCliente">
+                <option selected>Seleccionar...</option>
+                <option value="normal">Normal</option>
+                <option value="inapam">Inapam</option>
+                <option value="jubilidado">Jubilado</option>
+                <option value="pensionado">Pensionado</option>
+            </select>
+
+            <p class="datoForm">Clave de servicio</p>
+            <input type="text" class="form-control" id="claveServicio" name="claveServicio">
+            
+            <p class="datoForm">Número de medidor</p>
+            <input type="number" class="form-control" id="numMedidor" name="numMedidor">
+            
+
+            <p class="datoForm">Zona</p>
+            <select class="form-select" id="zona" name="zona">
+                <option selected>Seleccionar...</option>
+                <option value="alta">Alta</option>
+                <option value="centro">Centro</option>
+                <option value="baja">baja</option>
+                <option value="orillas">Orillas</option>
+            </select>
+
+            <p class="datoForm">Observaciones</p>
+            <input type="text" class="form-control" id="materiaPrima_canPlan" name="materiaPrima_canPlan">
+
+            <button class="btn btn-primary" type="submit" onclick=calcularTotal(); name="enviar">Guardar</button>
+            
+            </main>
+            </form>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+              <div class="col-12 col-md">
+                <img class="mb-2" src="img/inicio.jpg" alt="" width="24" height="19">
+                <small class="d-block mb-3 text-body-secondary">&copy; 2023</small>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Estructura Organizacional</h5>
+                <ul class="list-unstyled text-small">
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Organigrama</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Trámite y servicios</h5>
+                <ul class="list-unstyled text-small">
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Reporte de fugas</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Requerimientos para constancias</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Requerimientos para nuevo contrato</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Requerimientos para cambios de titular</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Quejas y sugerencias</a></li>
+        
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Tarifas</h5>
+                <ul class="list-unstyled text-small">
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Por servicio</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Calendario de pagos</a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+    </body>
+</html>
